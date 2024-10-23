@@ -8,7 +8,7 @@ export default function Gallery({ data }) {
   return (
     <Group justify="center" align="center">
       {gallery.map((el) => (
-        <GalleryPart src_link={el.src_link} title={el.title} key={el.index} />
+        <GalleryPart src_link={el.src_link} title={el.title} key={el.index} src_href={el.src_href}/>
       ))}
     </Group>
   );
