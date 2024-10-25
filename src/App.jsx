@@ -1,7 +1,7 @@
 import "@mantine/core/styles.css";
 import { Flex, Group, MantineProvider } from "@mantine/core";
 import GallerySection from "./sections/GallerySection";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/Tabs/NavBar";
 
 function App() {
   let list = [
@@ -20,14 +20,12 @@ function App() {
   ];
   return (
     <MantineProvider defaultColorScheme="dark">
-      <Flex h="100vh" direction="column">
-        <Group size="md" justify="center" gap="md">
-          <NavBar
-            section_1={<GallerySection data={list} />}
-            section_2={<GallerySection data={list} />}
-            section_3={<GallerySection data={list} />}
-          />
-        </Group>
+      <Flex w="100vw" h="100vh" direction="column">
+        <NavBar
+          section_1={<GallerySection data={list} />}
+          section_2={<GallerySection data={list} />}
+          section_3={null}
+        />
       </Flex>
     </MantineProvider>
   );

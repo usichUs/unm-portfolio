@@ -1,9 +1,9 @@
 import { Center, Container } from "@mantine/core";
-import Gallery from "../components/Gallery";
+import Gallery from "../components/Gallery/Gallery";
 
 export default function GallerySection({ data }) {
   return (
-    <Center w="100vw">
+    <Center miw="100%">
       <Container>
         <Gallery data={data} />
       </Container>
