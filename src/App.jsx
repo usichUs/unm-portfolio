@@ -2,6 +2,7 @@ import "@mantine/core/styles.css";
 import { Flex, Group, MantineProvider } from "@mantine/core";
 import GallerySection from "./sections/GallerySection";
 import NavBar from "./components/Tabs/NavBar";
+import Profile from "./components/AboutMe/Profile";
 
 function App() {
   let list = [
@@ -22,7 +23,7 @@ function App() {
     <MantineProvider defaultColorScheme="dark">
       <Flex w="100vw" h="100vh" direction="column">
         <NavBar
-          section_1={<GallerySection data={list} />}
+          section_1={<Profile />}
           section_2={<GallerySection data={list} />}
           section_3={null}
         />

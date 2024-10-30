@@ -3,7 +3,7 @@ import { IconBorderAll, IconFaceId, IconLink } from "@tabler/icons-react";
 
 export default function NavBar({ section_1, section_2, section_3 }) {
   return (
-    <Box maw="1000px" justify="center" m="auto" w="100%">
+    <Box m="auto" w="100%" pos="fixed">
       <Tabs defaultValue="1">
         <Tabs.List justify="space-around" grow>
           <Tabs.Tab leftSection={<IconFaceId />} value="1"></Tabs.Tab>
