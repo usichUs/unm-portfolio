@@ -1,0 +1,16 @@
+{
+    "data": [
+    {
+      "index": 0,
+      "src_link": "/src/assets/BullsCows.png",
+      "title": "Bulls-Cows",
+      "src_href": "https://usichus.github.io/bulls-cows/"
+    },
+    {
+      "index": 1,
+      "src_link": "/src/assets/FileSystem.png",
+      "title": "File System",
+      "src_href": "https://usichus.github.io/courseWork/"
+    }
+  ]
+}
