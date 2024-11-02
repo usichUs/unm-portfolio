@@ -1,9 +1,9 @@
 import GalleryPart from "./GalleryPart";
-import { Flex } from "@mantine/core";
+import { Group } from "@mantine/core";
 
 export default function Gallery({ data }) {
   return (
-    <Flex justify="center" align="center" direction="row" wrap="wrap">
+    <Group justify='center'>
       {data.map((el) => (
         <GalleryPart
           src_link={el.src_link}
@@ -12,6 +12,10 @@ export default function Gallery({ data }) {
           src_href={el.src_href}
         />
       ))}
-    </Flex>
+    </Group>
   );
+}
+{
+  /* <Flex justify="center" align="center" direction="row" wrap="wrap">
+</Flex> */
 }

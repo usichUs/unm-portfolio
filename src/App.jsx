@@ -1,10 +1,34 @@
 import "@mantine/core/styles.css";
-import { Alert, Flex, MantineProvider } from "@mantine/core";
+import {
+  Alert,
+  Button,
+  createTheme,
+  Loader,
+  MantineProvider,
+} from "@mantine/core";
 import NavBar from "./components/Tabs/NavBar";
 import Profile from "./components/AboutMe/Profile";
 import useFetch from "./hooks/useFetch";
-import { IconAlertCircle, IconLoader } from "@tabler/icons-react";
+import { IconAlertCircle } from "@tabler/icons-react";
 import Gallery from "./components/Gallery/Gallery";
+
+const theme = createTheme({
+  autoContrast: true,
+  luminanceThreshold: 0.55,
+  defaultGradient: {
+    from: 'green',
+    to: 'teal',
+    deg: 45,
+  },
+  components: {
+    Button: Button.extend({
+      defaultProps: {
+        color: "green",
+        variant: 'gradient'
+      },
+    }),
+  },
+});
 
 function App() {
   const { data, error, pending } = useFetch({
@@ -12,7 +36,7 @@ function App() {
   });
   // npx json-server --watch data/db.json --port 8000
   return (
-    <MantineProvider defaultColorScheme="dark">
+    <MantineProvider theme={theme} defaultColorScheme="dark">
       <NavBar
         section_1={<Profile />}
         section_2={
@@ -21,7 +45,7 @@ function App() {
               variant="light"
               color="green"
               title="Alert title"
-              icon={<IconLoader />}
+              icon={<Loader color="green" size="xs" type="bars" />}
             >
               Loading...
             </Alert> // Показать индикатор загрузки, пока данные загружаются
