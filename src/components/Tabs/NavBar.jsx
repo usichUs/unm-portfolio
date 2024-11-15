@@ -20,7 +20,10 @@ export default function NavBar({ section_1, section_2, section_3 }) {
     <Tabs defaultValue="1">
       {/* Tabs */}
       <Affix position={{ top: 0, left: 0 }} w="100%">
-        <Container>
+        <Container
+          bg="linear-gradient(45deg, rgb(47, 158, 68) 0%, rgb(9, 146, 104) 100%)"
+          p="0"
+        >
           <Tabs.List grow>
             {tabs.map((el) => (
               <Tabs.Tab key={el.index} leftSection={el.icon} value={el.value}>

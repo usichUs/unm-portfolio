@@ -16,15 +16,15 @@ const theme = createTheme({
   autoContrast: true,
   luminanceThreshold: 0.55,
   defaultGradient: {
-    from: 'green',
-    to: 'teal',
+    from: "green",
+    to: "teal",
     deg: 45,
   },
   components: {
     Button: Button.extend({
       defaultProps: {
         color: "green",
-        variant: 'gradient'
+        variant: "gradient",
       },
     }),
   },
@@ -34,7 +34,7 @@ function App() {
   const { data, error, pending } = useFetch({
     url: "http://localhost:8000/data",
   });
-  // npx json-server --watch data/db.json --port 8000
+  // npx json-server --watch data/db.json --port 8000 бабаб
   return (
     <MantineProvider theme={theme} defaultColorScheme="dark">
       <NavBar
